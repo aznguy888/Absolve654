@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>iPXE git repositories - ipxe.git/atom log</title>
+<subtitle>Main iPXE repository</subtitle>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git" />
+<link rel="self" type="application/atom+xml" href="https://git.ipxe.org" />
+<id>https://git.ipxe.org/ipxe.git</id>
+<author><name>Michael Brown</name></author>
+<icon>static/git-favicon.png</icon>
+<logo>static/git-logo.png</logo>
+<updated>2014-08-01T09:51:38Z</updated>
+<generator version='1.7.9/1.7.9'>gitweb</generator>
+<entry>
+<title type="html">[efi] Print raw device path when we have no DevicePathToTextProtocol</title>
+<updated>2014-08-01T09:51:15Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-08-01T09:51:15Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/c77859931d44c9d8688fef790aff94ca7ed4d612" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/c77859931d44c9d8688fef790aff94ca7ed4d612</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Print raw device path when we have no DevicePathToTextProtocol
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/102008f648c6bf81a680a9dcb2d33fe9c15bfc16..c77859931d44c9d8688fef790aff94ca7ed4d612:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/c77859931d44c9d8688fef790aff94ca7ed4d612:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/c77859931d44c9d8688fef790aff94ca7ed4d612?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Also try original ComponentName protocol for retrieving driver names</title>
+<updated>2014-08-01T09:36:25Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-08-01T09:36:25Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/102008f648c6bf81a680a9dcb2d33fe9c15bfc16" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/102008f648c6bf81a680a9dcb2d33fe9c15bfc16</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Also try original ComponentName protocol for retrieving driver names
+
+The ComponentName and ComponentName2 protocols differ only in the
+standard which is used for language name codes.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/f2071769879dd2fe4a62a99f4816f09d960d5fe9..102008f648c6bf81a680a9dcb2d33fe9c15bfc16:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/102008f648c6bf81a680a9dcb2d33fe9c15bfc16:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/102008f648c6bf81a680a9dcb2d33fe9c15bfc16?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Add excessive sanity checks into efi_debug functions</title>
+<updated>2014-07-31T23:03:39Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T23:03:39Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/f2071769879dd2fe4a62a99f4816f09d960d5fe9" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/f2071769879dd2fe4a62a99f4816f09d960d5fe9</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Add excessive sanity checks into efi_debug functions
+
+Try very hard to avoid ever doing something invalid while attempting
+to generate a debug message.
+
+Debugged-by: Curtis Larsen &lt;larsen@dixie.edu&gt;
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/89c8c7d4eb14754f2a513d025aa0309b566c6f59..f2071769879dd2fe4a62a99f4816f09d960d5fe9:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/f2071769879dd2fe4a62a99f4816f09d960d5fe9:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/f2071769879dd2fe4a62a99f4816f09d960d5fe9?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Improve debugging of the debugging facilities</title>
+<updated>2014-07-31T22:44:43Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T22:44:43Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/89c8c7d4eb14754f2a513d025aa0309b566c6f59" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/89c8c7d4eb14754f2a513d025aa0309b566c6f59</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Improve debugging of the debugging facilities
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/7023923db2eef64fcc3ec38fbe1054a47db1036b..89c8c7d4eb14754f2a513d025aa0309b566c6f59:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/89c8c7d4eb14754f2a513d025aa0309b566c6f59:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/89c8c7d4eb14754f2a513d025aa0309b566c6f59?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Dump handle information around connect/disconnect attempts</title>
+<updated>2014-07-31T11:45:18Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T11:45:18Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/7023923db2eef64fcc3ec38fbe1054a47db1036b" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/7023923db2eef64fcc3ec38fbe1054a47db1036b</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Dump handle information around connect/disconnect attempts
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/16d99cc8ef3b816072e78c2d640e193d0359163f..7023923db2eef64fcc3ec38fbe1054a47db1036b:/src/interface/efi/efi_driver.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/7023923db2eef64fcc3ec38fbe1054a47db1036b:/src/interface/efi/efi_driver.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/7023923db2eef64fcc3ec38fbe1054a47db1036b?f=src/interface/efi/efi_driver.c">H</a>] src/interface/efi/efi_driver.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Dump existing openers when we are unable to open a protocol</title>
+<updated>2014-07-31T11:28:26Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T11:28:26Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/16d99cc8ef3b816072e78c2d640e193d0359163f" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/16d99cc8ef3b816072e78c2d640e193d0359163f</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Dump existing openers when we are unable to open a protocol
+
+Dump the existing openers of a protocol whenever we are unable to open
+a protocol using attributes of BY_DEVICE, EXCLUSIVE, or
+BY_CHILD_CONTROLLER.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c..16d99cc8ef3b816072e78c2d640e193d0359163f:/src/drivers/net/efi/snpnet.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/16d99cc8ef3b816072e78c2d640e193d0359163f:/src/drivers/net/efi/snpnet.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/16d99cc8ef3b816072e78c2d640e193d0359163f?f=src/drivers/net/efi/snpnet.c">H</a>] src/drivers/net/efi/snpnet.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c..16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_driver.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_driver.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/16d99cc8ef3b816072e78c2d640e193d0359163f?f=src/interface/efi/efi_driver.c">H</a>] src/interface/efi/efi_driver.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c..16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_file.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_file.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/16d99cc8ef3b816072e78c2d640e193d0359163f?f=src/interface/efi/efi_file.c">H</a>] src/interface/efi/efi_file.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c..16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_pci.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/16d99cc8ef3b816072e78c2d640e193d0359163f:/src/interface/efi/efi_pci.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/16d99cc8ef3b816072e78c2d640e193d0359163f?f=src/interface/efi/efi_pci.c">H</a>] src/interface/efi/efi_pci.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Avoid unnecessarily passing pointers to EFI_HANDLEs</title>
+<updated>2014-07-31T11:22:40Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T11:22:40Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Avoid unnecessarily passing pointers to EFI_HANDLEs
+
+efi_file_install() and efi_download_install() are both used to install
+onto existing handles.  There is therefore no need to allow for each
+of their calls to InstallMultipleProtocolInterfaces() to create a new
+handle.
+
+By passing the handle directly (rather than a pointer to the handle),
+we avoid potential confusion (and erroneous debug message colours).
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53..4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/image/efi_image.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/image/efi_image.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c?f=src/image/efi_image.c">H</a>] src/image/efi_image.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53..4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/include/ipxe/efi/efi_download.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/include/ipxe/efi/efi_download.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c?f=src/include/ipxe/efi/efi_download.h">H</a>] src/include/ipxe/efi/efi_download.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53..4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/include/ipxe/efi/efi_file.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/include/ipxe/efi/efi_file.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c?f=src/include/ipxe/efi/efi_file.h">H</a>] src/include/ipxe/efi/efi_file.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53..4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/interface/efi/efi_download.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/interface/efi/efi_download.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c?f=src/interface/efi/efi_download.c">H</a>] src/interface/efi/efi_download.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53..4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/interface/efi/efi_file.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c:/src/interface/efi/efi_file.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/4a480f1d1565aa5972c4fc27ceec8ae4b9b1e86c?f=src/interface/efi/efi_file.c">H</a>] src/interface/efi/efi_file.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Allow compiler to perform type checks on EFI_HANDLE</title>
+<updated>2014-07-31T11:17:59Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T11:17:59Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Allow compiler to perform type checks on EFI_HANDLE
+
+The EFI headers define EFI_HANDLE as a void pointer, which renders
+type checking on anything dealing with EFI handles somewhat useless.
+Work around this bizarre sabotage attempt by redefining EFI_HANDLE as
+a pointer to an anonymous structure.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/60891f699ae268ef6ca425013b2427769a5f5fc2..88bd71a27abb658a2ac12b54ed78c5cfd4c99f53:/src/include/ipxe/efi/efi.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53:/src/include/ipxe/efi/efi.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/88bd71a27abb658a2ac12b54ed78c5cfd4c99f53?f=src/include/ipxe/efi/efi.h">H</a>] src/include/ipxe/efi/efi.h</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Use efi_handle_name() instead of efi_devpath_text() where applicable</title>
+<updated>2014-07-31T10:21:09Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T10:21:09Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/60891f699ae268ef6ca425013b2427769a5f5fc2" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/60891f699ae268ef6ca425013b2427769a5f5fc2</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Use efi_handle_name() instead of efi_devpath_text() where applicable
+
+Using efi_devpath_text() is marginally more efficient if we already
+have the device path protocol available, but the mild increase in
+efficiency is not worth compromising the clarity of the pattern:
+
+  DBGC ( device, &quot;THING %p %s ...&quot;, device, efi_handle_name ( device ) );
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/2e0821b9edc354387687d7c01e18616964ceaeda..60891f699ae268ef6ca425013b2427769a5f5fc2:/src/drivers/net/efi/snpnet.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/60891f699ae268ef6ca425013b2427769a5f5fc2:/src/drivers/net/efi/snpnet.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/60891f699ae268ef6ca425013b2427769a5f5fc2?f=src/drivers/net/efi/snpnet.c">H</a>] src/drivers/net/efi/snpnet.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/2e0821b9edc354387687d7c01e18616964ceaeda..60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_bofm.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_bofm.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/60891f699ae268ef6ca425013b2427769a5f5fc2?f=src/interface/efi/efi_bofm.c">H</a>] src/interface/efi/efi_bofm.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/2e0821b9edc354387687d7c01e18616964ceaeda..60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_pci.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_pci.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/60891f699ae268ef6ca425013b2427769a5f5fc2?f=src/interface/efi/efi_pci.c">H</a>] src/interface/efi/efi_pci.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/2e0821b9edc354387687d7c01e18616964ceaeda..60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_snp.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/60891f699ae268ef6ca425013b2427769a5f5fc2:/src/interface/efi/efi_snp.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/60891f699ae268ef6ca425013b2427769a5f5fc2?f=src/interface/efi/efi_snp.c">H</a>] src/interface/efi/efi_snp.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Use efi_handle_name() instead of efi_handle_devpath_text()</title>
+<updated>2014-07-31T09:44:25Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-31T09:44:25Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/2e0821b9edc354387687d7c01e18616964ceaeda" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/2e0821b9edc354387687d7c01e18616964ceaeda</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Use efi_handle_name() instead of efi_handle_devpath_text()
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/drivers/net/efi/snp.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/drivers/net/efi/snp.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/drivers/net/efi/snp.c">H</a>] src/drivers/net/efi/snp.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/drivers/net/efi/snponly.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/drivers/net/efi/snponly.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/drivers/net/efi/snponly.c">H</a>] src/drivers/net/efi/snponly.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/include/ipxe/efi/efi.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/include/ipxe/efi/efi.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/include/ipxe/efi/efi.h">H</a>] src/include/ipxe/efi/efi.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_bofm.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_bofm.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/interface/efi/efi_bofm.c">H</a>] src/interface/efi/efi_bofm.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_driver.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_driver.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/interface/efi/efi_driver.c">H</a>] src/interface/efi/efi_driver.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_pci.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_pci.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/interface/efi/efi_pci.c">H</a>] src/interface/efi/efi_pci.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/736fcf60d1db389941b4f15f94c31fe0403552a8..2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_wrap.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/2e0821b9edc354387687d7c01e18616964ceaeda:/src/interface/efi/efi_wrap.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/2e0821b9edc354387687d7c01e18616964ceaeda?f=src/interface/efi/efi_wrap.c">H</a>] src/interface/efi/efi_wrap.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Add ability to dump all openers of a given protocol on a handle</title>
+<updated>2014-07-30T23:09:58Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T23:09:58Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/736fcf60d1db389941b4f15f94c31fe0403552a8" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/736fcf60d1db389941b4f15f94c31fe0403552a8</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Add ability to dump all openers of a given protocol on a handle
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/550f212d157f9f3ae025bbdb654c4184467ad826..736fcf60d1db389941b4f15f94c31fe0403552a8:/src/include/ipxe/efi/efi.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/736fcf60d1db389941b4f15f94c31fe0403552a8:/src/include/ipxe/efi/efi.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/736fcf60d1db389941b4f15f94c31fe0403552a8?f=src/include/ipxe/efi/efi.h">H</a>] src/include/ipxe/efi/efi.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/550f212d157f9f3ae025bbdb654c4184467ad826..736fcf60d1db389941b4f15f94c31fe0403552a8:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/736fcf60d1db389941b4f15f94c31fe0403552a8:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/736fcf60d1db389941b4f15f94c31fe0403552a8?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Provide efi_handle_name() for debugging</title>
+<updated>2014-07-30T23:05:04Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T23:05:04Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/550f212d157f9f3ae025bbdb654c4184467ad826" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/550f212d157f9f3ae025bbdb654c4184467ad826</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Provide efi_handle_name() for debugging
+
+Provide a function efi_handle_name() (as a generalisation of
+efi_handle_devpath_text()) which tries various methods to produce a
+human-readable name for an EFI handle.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/0b40e76d95396a25d56b6a1624d5819910c3f755..550f212d157f9f3ae025bbdb654c4184467ad826:/src/include/ipxe/efi/efi.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/550f212d157f9f3ae025bbdb654c4184467ad826:/src/include/ipxe/efi/efi.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/550f212d157f9f3ae025bbdb654c4184467ad826?f=src/include/ipxe/efi/efi.h">H</a>] src/include/ipxe/efi/efi.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/0b40e76d95396a25d56b6a1624d5819910c3f755..550f212d157f9f3ae025bbdb654c4184467ad826:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/550f212d157f9f3ae025bbdb654c4184467ad826:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/550f212d157f9f3ae025bbdb654c4184467ad826?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Expand the range of well-known EFI GUIDs in debug messages</title>
+<updated>2014-07-30T23:00:18Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T23:00:18Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/0b40e76d95396a25d56b6a1624d5819910c3f755" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/0b40e76d95396a25d56b6a1624d5819910c3f755</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Expand the range of well-known EFI GUIDs in debug messages
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199..0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/BusSpecificDriverOverride.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/BusSpecificDriverOverride.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/0b40e76d95396a25d56b6a1624d5819910c3f755?f=src/include/ipxe/efi/Protocol/BusSpecificDriverOverride.h">H</a>] src/include/ipxe/efi/Protocol/BusSpecificDriverOverride.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199..0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/ComponentName.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/ComponentName.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/0b40e76d95396a25d56b6a1624d5819910c3f755?f=src/include/ipxe/efi/Protocol/ComponentName.h">H</a>] src/include/ipxe/efi/Protocol/ComponentName.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199..0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/LoadFile2.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/0b40e76d95396a25d56b6a1624d5819910c3f755:/src/include/ipxe/efi/Protocol/LoadFile2.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/0b40e76d95396a25d56b6a1624d5819910c3f755?f=src/include/ipxe/efi/Protocol/LoadFile2.h">H</a>] src/include/ipxe/efi/Protocol/LoadFile2.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199..0b40e76d95396a25d56b6a1624d5819910c3f755:/src/interface/efi/efi_debug.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/0b40e76d95396a25d56b6a1624d5819910c3f755:/src/interface/efi/efi_debug.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/0b40e76d95396a25d56b6a1624d5819910c3f755?f=src/interface/efi/efi_debug.c">H</a>] src/interface/efi/efi_debug.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Ignore failures when attempting to install SNP HII protocol</title>
+<updated>2014-07-30T17:44:09Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T17:44:09Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Ignore failures when attempting to install SNP HII protocol
+
+HII seems to fail on several systems.  Since it is non-essential,
+treat HII problems as non-fatal.
+
+Debugged-by: Curtis Larsen &lt;larsen@dixie.edu&gt;
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c..7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199:/src/interface/efi/efi_snp.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199:/src/interface/efi/efi_snp.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199?f=src/interface/efi/efi_snp.c">H</a>] src/interface/efi/efi_snp.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c..7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199:/src/interface/efi/efi_snp_hii.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199:/src/interface/efi/efi_snp_hii.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/7cfb502fffd79a2c7d832e8b9ba4ba8fa82df199?f=src/interface/efi/efi_snp_hii.c">H</a>] src/interface/efi/efi_snp_hii.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[netdevice] Avoid registering duplicate network devices</title>
+<updated>2014-07-30T17:11:20Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T17:11:20Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[netdevice] Avoid registering duplicate network devices
+
+Reject network devices which appear to be duplicates of those already
+available via a different underlying hardware device.  On a Xen PV-HVM
+system, this allows us to filter out the emulated PCI NICs (which
+would otherwise appear alongside the netfront NICs).
+
+Note that we cannot use the Xen facility to &quot;unplug&quot; the emulated PCI
+NICs, since there is no guarantee that the OS we subsequently load
+will have a native netfront driver.
+
+We permit devices with the same MAC address if they are attached to
+the same underlying hardware device (e.g. VLAN devices).
+
+Inspired-by: Marin Hannache &lt;git@mareo.fr&gt;
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/057eb9e496b4d6e04864df48f3855f014da53aeb..98d09a1e0372226bdea46f7dc8ce7f0cae98f08c:/src/include/ipxe/netdevice.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c:/src/include/ipxe/netdevice.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c?f=src/include/ipxe/netdevice.h">H</a>] src/include/ipxe/netdevice.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/057eb9e496b4d6e04864df48f3855f014da53aeb..98d09a1e0372226bdea46f7dc8ce7f0cae98f08c:/src/net/netdevice.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c:/src/net/netdevice.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/98d09a1e0372226bdea46f7dc8ce7f0cae98f08c?f=src/net/netdevice.c">H</a>] src/net/netdevice.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Report exact failure when unable to open the device path</title>
+<updated>2014-07-30T16:53:51Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T16:53:51Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/057eb9e496b4d6e04864df48f3855f014da53aeb" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/057eb9e496b4d6e04864df48f3855f014da53aeb</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Report exact failure when unable to open the device path
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89..057eb9e496b4d6e04864df48f3855f014da53aeb:/src/interface/efi/efi_driver.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/057eb9e496b4d6e04864df48f3855f014da53aeb:/src/interface/efi/efi_driver.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/057eb9e496b4d6e04864df48f3855f014da53aeb?f=src/interface/efi/efi_driver.c">H</a>] src/interface/efi/efi_driver.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Fix incorrect debug message level when device has no device path</title>
+<updated>2014-07-30T16:15:39Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T16:15:39Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Fix incorrect debug message level when device has no device path
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/79419a1c69c13c854148021ce4203c0dd6908b2a..608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89:/src/interface/efi/efi_driver.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89:/src/interface/efi/efi_driver.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/608fb792eb640a7cfb23f4b8bc80da4ec8fb4d89?f=src/interface/efi/efi_driver.c">H</a>] src/interface/efi/efi_driver.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Fill in loaded image's DeviceHandle if firmware fails to do so</title>
+<updated>2014-07-30T15:16:10Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T15:16:10Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/79419a1c69c13c854148021ce4203c0dd6908b2a" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/79419a1c69c13c854148021ce4203c0dd6908b2a</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Fill in loaded image's DeviceHandle if firmware fails to do so
+
+Some EFI 1.10 implementations (observed with a mid-2011 iMac) seem to
+fail to fill in the DeviceHandle for our loaded images.  It is
+plausible that these implementations fill in the DeviceHandle only if
+loading the image from a device path (rather than directly from a
+memory buffer).
+
+Work around this problem by filling in DeviceHandle if the firmware
+leaves it empty.
+
+We cannot sensibly fill in FilePath, because we have no way of knowing
+whether or not the firmware will treat this as a pointer to be freed
+when the image returns.
+
+Reported-by: Curtis Larsen &lt;larsen@dixie.edu&gt;
+Tested-by: Curtis Larsen &lt;larsen@dixie.edu&gt;
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/b53d4ae398e74846a6590fc48c295f319397e9c1..79419a1c69c13c854148021ce4203c0dd6908b2a:/src/image/efi_image.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/79419a1c69c13c854148021ce4203c0dd6908b2a:/src/image/efi_image.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/79419a1c69c13c854148021ce4203c0dd6908b2a?f=src/image/efi_image.c">H</a>] src/image/efi_image.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Unload started images only on failure</title>
+<updated>2014-07-30T15:07:25Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T15:07:25Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/b53d4ae398e74846a6590fc48c295f319397e9c1" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/b53d4ae398e74846a6590fc48c295f319397e9c1</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Unload started images only on failure
+
+If the StartImage() call returns with no error, then the image must
+have been started and returned successfully.  It either unloaded
+itself, or it intended to remain loaded (e.g. it was a driver).  We
+therefore do not unload successful images.
+
+If there was an error, we attempt to unload the image.  This may not
+work.  In particular, there is no way to tell whether an error
+returned from StartImage() was due to being unable to start the image
+(in which case we probably should call UnloadImage()), or due to the
+image itself returning an error (in which case we probably should not
+call UnloadImage()).  We therefore ignore any failures from the
+UnloadImage() call itself.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/dc18fd76488476c8bd5b70ba228576d328280670..b53d4ae398e74846a6590fc48c295f319397e9c1:/src/image/efi_image.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/b53d4ae398e74846a6590fc48c295f319397e9c1:/src/image/efi_image.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/b53d4ae398e74846a6590fc48c295f319397e9c1?f=src/image/efi_image.c">H</a>] src/image/efi_image.c</li>
+</ul>
+</div>
+</content>
+</entry>
+<entry>
+<title type="html">[efi] Default to releasing network devices for use via SNP</title>
+<updated>2014-07-30T13:21:10Z</updated>
+<author>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</author>
+<contributor>
+  <name>Michael Brown</name>
+  <email>mcb30@ipxe.org</email>
+</contributor>
+<published>2014-07-30T13:21:10Z</published>
+<link rel="alternate" type="text/html" href="https://git.ipxe.org/ipxe.git/commitdiff/dc18fd76488476c8bd5b70ba228576d328280670" />
+<id>https://git.ipxe.org/ipxe.git/commitdiff/dc18fd76488476c8bd5b70ba228576d328280670</id>
+<content type="xhtml" xml:base="https://git.ipxe.org">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<pre>
+[efi] Default to releasing network devices for use via SNP
+
+We currently treat network devices as available for use via the SNP
+API only if RX queue processing has been frozen.  (This is similar in
+spirit to the way that RX queue processing is frozen for the network
+device currently exposed via the PXE API.)
+
+The default state of a freshly created network device is for the RX
+queue to not be frozen, and thus to be unavailable for use via SNP.
+This causes problems when devices are added through code paths other
+than _efidrv_start() (which explicitly releases devices for use via
+SNP).
+
+We don't actually need to freeze RX queue processing, since calls via
+the SNP API will always use netdev_poll() rather than net_poll(), and
+so will never trigger the RX queue processing code path anyway.
+
+We can therefore simplify the code to use a single global flag to
+indicate whether network devices are claimed for use by iPXE or
+available for use via SNP.  Using a global flag allows the default
+state for dynamically created network devices to behave sensibly.
+
+Signed-off-by: Michael Brown &lt;mcb30@ipxe.org&gt;
+</pre><ul>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/793a806611f5a7b3a404afb27c837a3da381952e..dc18fd76488476c8bd5b70ba228576d328280670:/src/arch/x86/prefix/efidrvprefix.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/dc18fd76488476c8bd5b70ba228576d328280670:/src/arch/x86/prefix/efidrvprefix.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/dc18fd76488476c8bd5b70ba228576d328280670?f=src/arch/x86/prefix/efidrvprefix.c">H</a>] src/arch/x86/prefix/efidrvprefix.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/793a806611f5a7b3a404afb27c837a3da381952e..dc18fd76488476c8bd5b70ba228576d328280670:/src/arch/x86/prefix/efiprefix.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/dc18fd76488476c8bd5b70ba228576d328280670:/src/arch/x86/prefix/efiprefix.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/dc18fd76488476c8bd5b70ba228576d328280670?f=src/arch/x86/prefix/efiprefix.c">H</a>] src/arch/x86/prefix/efiprefix.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/793a806611f5a7b3a404afb27c837a3da381952e..dc18fd76488476c8bd5b70ba228576d328280670:/src/include/ipxe/efi/efi_snp.h">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/dc18fd76488476c8bd5b70ba228576d328280670:/src/include/ipxe/efi/efi_snp.h">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/dc18fd76488476c8bd5b70ba228576d328280670?f=src/include/ipxe/efi/efi_snp.h">H</a>] src/include/ipxe/efi/efi_snp.h</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/793a806611f5a7b3a404afb27c837a3da381952e..dc18fd76488476c8bd5b70ba228576d328280670:/src/interface/efi/efi_download.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/dc18fd76488476c8bd5b70ba228576d328280670:/src/interface/efi/efi_download.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/dc18fd76488476c8bd5b70ba228576d328280670?f=src/interface/efi/efi_download.c">H</a>] src/interface/efi/efi_download.c</li>
+<li>[<a title="diff" href="https://git.ipxe.org/ipxe.git/blobdiff/793a806611f5a7b3a404afb27c837a3da381952e..dc18fd76488476c8bd5b70ba228576d328280670:/src/interface/efi/efi_snp.c">D</a><a title="blame" href="https://git.ipxe.org/ipxe.git/blame/dc18fd76488476c8bd5b70ba228576d328280670:/src/interface/efi/efi_snp.c">B</a><a title="history" href="https://git.ipxe.org/ipxe.git/history/dc18fd76488476c8bd5b70ba228576d328280670?f=src/interface/efi/efi_snp.c">H</a>] src/interface/efi/efi_snp.c</li>
+</ul>
+</div>
+</content>
+</entry>
+</feed>
